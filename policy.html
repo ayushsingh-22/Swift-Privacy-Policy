@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SwiftNote Privacy Policy</title>
+<style>
+  :root { --ink:#1f2430; --muted:#5b6472; --accent:#6366F1; --line:#e3e6ec; --bg:#ffffff; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+         line-height:1.65; color:var(--ink); background:var(--bg);
+         max-width:780px; margin:0 auto; padding:40px 22px 80px; }
+  h1 { font-size:2rem; line-height:1.2; margin:0 0 6px; }
+  h2 { font-size:1.3rem; margin:2.4em 0 .5em; padding-bottom:.3em; border-bottom:1px solid var(--line); }
+  h3 { font-size:1.05rem; margin:1.6em 0 .4em; color:var(--accent); }
+  p { margin:.7em 0; }
+  a { color:var(--accent); word-break:break-word; }
+  ul { margin:.6em 0; padding-left:1.3em; }
+  li { margin:.3em 0; }
+  hr { border:none; border-top:1px solid var(--line); margin:2.2em 0; }
+  table { border-collapse:collapse; width:100%; margin:1.2em 0; font-size:.94rem; }
+  th,td { border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top; }
+  th { background:#f6f7f9; font-weight:600; }
+  em { color:var(--muted); }
+  code { background:#f1f2f5; padding:1px 5px; border-radius:4px; font-size:.9em; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e4e7ee; --muted:#9aa3b2; --line:#2a2f3a; --bg:#15171c; }
+    th { background:#1c1f27; }
+    code { background:#222631; }
+  }
+</style>
+</head>
+<body>
+<h1>Privacy Policy for SwiftNote</h1>
+<p><strong>Last updated: June 3, 2026</strong></p>
+<p>This Privacy Policy describes how SwiftNote ("the app," "we," "our") handles your information. SwiftNote is a note-taking application for Android. We have designed the app to keep your notes private — your note content is encrypted on your device before it ever leaves it.</p>
+<p>Please read this policy carefully. By using SwiftNote, you agree to the practices described here.</p>
+<hr/>
+<h2>Summary (the short version)</h2>
+<ul>
+<li>Your notes are <strong>encrypted on your device</strong> before being stored or synced. We cannot read them.</li>
+<li>We do <strong>not</strong> require you to create an account, give an email, or provide your name.</li>
+<li>We do <strong>not</strong> sell your data or share it with advertisers.</li>
+<li>AI-powered features are <strong>opt-in</strong> and only work if you add your own AI provider key.</li>
+<li>You can delete all your data at any time from within the app.</li>
+</ul>
+<hr/>
+<h2>1. Information We Collect and How We Use It</h2>
+<h3>1.1 Note content (encrypted)</h3>
+<p>When you create notes, checklists, and reminders, that content is stored:</p>
+<ul>
+<li><strong>Locally on your device</strong>, in the app's private storage.</li>
+<li><strong>Optionally in the cloud</strong> (Google Firebase Realtime Database) so you can back up and sync your notes across devices.</li>
+</ul>
+<p><strong>Before any note leaves your device, it is encrypted</strong> using AES-128-GCM authenticated encryption with a key derived from your device or your sync passphrase. The data stored in the cloud is ciphertext. We do not have, and cannot obtain, the keys needed to read your note content. To anyone inspecting the stored data — including us — your notes appear as unreadable encrypted text.</p>
+<h3>1.2 Device identifier</h3>
+<p>SwiftNote uses a device identifier (derived from your device's Android ID) as your anonymous account key. This identifier is how your encrypted notes are associated with you for backup and sync. It is not linked to your name, email, phone number, or any personal identity. We do not use it for tracking or advertising.</p>
+<h3>1.3 Sync passphrase</h3>
+<p>If you choose to sync notes across multiple devices, you may use a passphrase. This passphrase is used to locate and decrypt your synced notes. Choose a passphrase you can remember — because your notes are end-to-end encrypted, <strong>we cannot recover your notes if you lose your passphrase or device identifier.</strong></p>
+<h3>1.4 Reminders</h3>
+<p>Reminder times and recurrence settings are stored locally on your device and (in encrypted form) in the cloud alongside your notes. Reminders are delivered as local notifications on your device.</p>
+<h3>1.5 Analytics (limited and anonymous)</h3>
+<p>SwiftNote uses Google Firebase Analytics to understand which features are used, so we can improve the app. Our analytics are deliberately minimal:</p>
+<ul>
+<li>We log when certain features are used (for example, tapping a detected phone number or link in a note).</li>
+<li>We log only the <strong>type</strong> of action (for example, "phone number tapped"), <strong>never the content</strong> of your notes. We do not send your note text, titles, phone numbers, links, or any note data to analytics.</li>
+</ul>
+<h3>1.6 Camera</h3>
+<p>SwiftNote requests camera access <strong>only</strong> for scanning QR codes used to transfer your sync identity between your own devices. The camera is not used for any other purpose. No photos or video are recorded, stored, or transmitted.</p>
+<hr/>
+<h2>2. AI-Powered Features (Optional, Opt-In)</h2>
+<p>SwiftNote includes optional AI features that can detect reminders and suggest titles from your note text. These features are <strong>disabled by default</strong> and only work if you choose to enable them by adding your own API key from an AI provider (such as Google Gemini or Groq).</p>
+<p><strong>If you enable AI features:</strong></p>
+<ul>
+<li>The text of the note you are editing is sent to your chosen AI provider (Google or Groq) to detect reminder intent and extract dates and times.</li>
+<li>This communication goes <strong>directly from your device to the AI provider</strong> using the API key you supplied. The text is processed under that provider's privacy policy, not ours.</li>
+<li>Your API key is stored <strong>only on your device</strong>, using Android's EncryptedSharedPreferences (hardware-backed encryption). Your key is never transmitted to us and we never have access to it.</li>
+</ul>
+<p><strong>If you do not enable AI features</strong>, reminder detection runs entirely <strong>on your device</strong> using Google's ML Kit on-device entity extraction and built-in pattern matching. In this mode, no note text is sent to any external AI service.</p>
+<p>You can review the privacy practices of the AI providers here:</p>
+<ul>
+<li>Google Gemini / AI Studio: <a href="https://ai.google.dev/gemini-api/terms">https://ai.google.dev/gemini-api/terms</a></li>
+<li>Groq: <a href="https://groq.com/privacy-policy/">https://groq.com/privacy-policy/</a></li>
+</ul>
+<p>You can disable AI features and remove your API key at any time in the app's AI Settings.</p>
+<hr/>
+<h2>3. How Your Information Is Stored and Protected</h2>
+<table><thead><tr><th>Data</th><th>Where stored</th><th>Protection</th></tr></thead><tbody>
+<tr><td>Note content & reminders</td><td>Your device + Firebase (cloud)</td><td>AES-128-GCM encryption applied on-device before upload</td></tr>
+<tr><td>Device identifier</td><td>Your device + Firebase (as account key)</td><td>Anonymous; not linked to personal identity</td></tr>
+<tr><td>AI provider API key</td><td>Your device only</td><td>Android EncryptedSharedPreferences (AES-256)</td></tr>
+<tr><td>Analytics events</td><td>Google Firebase Analytics</td><td>Action type only; no note content</td></tr>
+</tbody></table>
+<p>Cloud storage and synchronization are provided by Google Firebase. Data transmitted to Firebase travels over encrypted connections (HTTPS/TLS). You can review Google Firebase's privacy and security information at <a href="https://firebase.google.com/support/privacy.">https://firebase.google.com/support/privacy.</a></p>
+<hr/>
+<h2>4. Data Sharing</h2>
+<p>We do <strong>not</strong>:</p>
+<ul>
+<li>Sell your personal information.</li>
+<li>Share your data with advertisers or data brokers.</li>
+<li>Share your note content with any third party (we cannot — it is encrypted and we do not hold the keys).</li>
+</ul>
+<p>The only third parties that process data on our behalf or at your direction are:</p>
+<ul>
+<li><strong>Google Firebase</strong> — provides cloud storage, synchronization, and anonymous analytics.</li>
+<li><strong>Your chosen AI provider (Google or Groq)</strong> — only if you opt in to AI features and only the note text you are editing, sent directly from your device using your own API key.</li>
+</ul>
+<hr/>
+<h2>5. Your Choices and Controls</h2>
+<ul>
+<li><strong>Use the app without cloud sync or AI.</strong> Core note-taking works on your device.</li>
+<li><strong>Delete your data.</strong> You can delete individual notes or all notes from within the app. Deleting notes removes them from your device and from cloud storage.</li>
+<li><strong>Remove AI access.</strong> Delete your API key in AI Settings at any time to stop all communication with AI providers.</li>
+<li><strong>Revoke permissions.</strong> You can revoke camera and notification permissions in your device's system settings; related features will simply stop working.</li>
+</ul>
+<hr/>
+<h2>6. Data Retention</h2>
+<p>Your notes remain stored until you delete them. When you delete a note, it is removed from your device and from cloud storage. If you uninstall the app without first deleting your notes, encrypted copies may remain in cloud storage; because they are encrypted and tied to your device identifier, they are not readable. You can delete this data by reinstalling the app and using the in-app delete options, or by contacting us at the address below.</p>
+<hr/>
+<h2>7. Children's Privacy</h2>
+<p>SwiftNote is not directed to children under 13 (or the minimum age of digital consent in your country). We do not knowingly collect personal information from children. If you believe a child has provided information through the app, please contact us.</p>
+<hr/>
+<h2>8. Permissions We Request and Why</h2>
+<table><thead><tr><th>Permission</th><th>Purpose</th></tr></thead><tbody>
+<tr><td>Internet / Network state</td><td>Cloud backup and sync; optional AI features</td></tr>
+<tr><td>Camera</td><td>Scanning QR codes to transfer sync identity between your own devices</td></tr>
+<tr><td>Post notifications</td><td>Delivering your reminders</td></tr>
+<tr><td>Schedule/use exact alarm</td><td>Delivering reminders at the precise time you set</td></tr>
+<tr><td>Receive boot completed</td><td>Restoring your scheduled reminders after the device restarts</td></tr>
+<tr><td>Vibrate / Wake lock</td><td>Reminder notifications</td></tr>
+<tr><td>Ignore battery optimizations (optional)</td><td>Ensuring reminders are delivered reliably in the background</td></tr>
+</tbody></table>
+<hr/>
+<h2>9. Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top. Significant changes will be communicated through the app or the Play Store listing. Continued use of the app after changes take effect constitutes acceptance of the updated policy.</p>
+<hr/>
+<h2>10. Contact Us</h2>
+<p>If you have questions about this Privacy Policy or your data, contact us at:</p>
+<p><strong>Email:</strong> <a href="mailto:ayushkumar2205@gmil.com">ayushkumar2205@gmil.com</a></p>
+<p><strong>Developer:</strong> Amvar Developers
+</p>
+<p><strong>App:</strong> SwiftNote</p>
+<hr/>
+<p><em>This policy reflects SwiftNote's actual data practices: end-to-end encryption of note content, anonymous device-based identity, opt-in AI with user-supplied keys, and minimal anonymous analytics.</em></p>
+</body>
+</html>
