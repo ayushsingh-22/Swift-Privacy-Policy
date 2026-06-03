@@ -2,10 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="refresh" content="0; url=policy.html"/>
-    <title>Redirecting to Privacy Policy</title>
+    <title>SwiftNote — Privacy Policy</title>
+    <style>
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background: #fafbfc;
+        color: #1a1d26;
+      }
+      .loader {
+        text-align: center;
+      }
+      .loader p {
+        font-size: 0.95rem;
+        color: #6b7280;
+      }
+      .loader a {
+        color: #6366F1;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      @media (prefers-color-scheme: dark) {
+        body { background: #0f1117; color: #e4e7ee; }
+        .loader p { color: #9aa3b2; }
+      }
+    </style>
 </head>
 <body>
-    <p>Redirecting to <a href="policy.html">SwiftNote Privacy Policy</a>...</p>
+    <div class="loader">
+      <p>Redirecting to <a href="policy.html">SwiftNote Privacy Policy</a>...</p>
+    </div>
 </body>
 </html>
